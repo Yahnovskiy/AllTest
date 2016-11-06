@@ -1,0 +1,18 @@
+source 'http://rubygems.org'
+
+gem 'rails'
+
+
+group :development, :test do
+  gem 'selenium-webdriver'
+  gem 'cucumber'
+  gem 'rspec'
+
+end
+
+group :test do
+  gem 'capybara'
+
+
+  
+end

@@ -1,0 +1,16 @@
+source "http://rubygems.org"
+
+group(:test) do
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'activerecord'
+  gem 'pg'
+  gem 'faker'
+  gem 'rake'
+  gem 'rspec-expectations'
+  gem 'minitest'
+  gem 'turn'
+end

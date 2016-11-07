@@ -3,7 +3,7 @@ Feature: Authorization
   @web
   Scenario: Invalid authorization
 #    что делать
-  Given I am on "Pinterest" site
+  Given I am on "http://www.google.com" site
   #Given When Then But высокоуровневые степы
   When I input in login "Roman_Test"
     And I input in password "123456789"

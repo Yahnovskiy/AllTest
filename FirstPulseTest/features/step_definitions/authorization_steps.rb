@@ -1,13 +1,18 @@
 Given(/^I am on "([^"]*)" site$/) do |arg|
-  visit ('http://www.google.com')
+  visit "https://ru.pinterest.com"
 
   # @driver.get("https://ru.pinterest.com")
   #driver.navigate.to "https://ru.pinterest.com/"
 end
 
-When(/^I input in login "([^"]*)"$/) do |login_name|
-  element = @driver.find_element(:xpath => 'html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/input')
-  element.send_keys login_name
+When(/^I input in login "([^"]*)"$/) do |arg|
+
+  find(:css =>'.NameAgeGenderStep__tooltip>fieldset>input').send(arg)
+
+  # send_keys arg
+    # .native.send_key login_name
+  # element = @driver.find_element(:xpath => 'html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/input')
+  # element.send_keys login_name
 end
 
 And(/^I input in password "([^"]*)"$/) do |password|
@@ -44,4 +49,5 @@ end
 
 
 # end
+
 

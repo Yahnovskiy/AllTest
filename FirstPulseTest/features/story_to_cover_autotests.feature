@@ -8,7 +8,7 @@ Feature: Authorization
   When I input in login "Roman_Test"
     And I input in password "123456789"
     And I try to sign in
-    Then Error Login message "Хм...Это не похоже на настоящий эл. адрес или номер телефона." displays
+    Then Error Login message "Xм...Это не похоже на настоящий эл. адрес или номер телефона." displays
 
 
 

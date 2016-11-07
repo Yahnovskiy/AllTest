@@ -9,14 +9,14 @@ Feature: Authorization
     And I input in password "123456789"
     And I try to sign in
     Then Error Login message "Хм...Это не похоже на настоящий эл. адрес или номер телефона." displays
-#    A
 
 
 
-  @web
-  Scenario: Verify image
-    Given I am on "Pinetrest" site
-    When I should see images
-    Then I compare image
+
+#  @web
+#  Scenario: Verify image
+#    Given I am on "Pinetrest" site
+#    When I should see images
+#    Then I compare image
 
 

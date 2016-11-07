@@ -1,5 +1,7 @@
 Given(/^I am on "([^"]*)" site$/) do |arg|
-  @driver.get("https://ru.pinterest.com")
+  visit ('http://www.google.com')
+
+  # @driver.get("https://ru.pinterest.com")
   #driver.navigate.to "https://ru.pinterest.com/"
 end
 
@@ -29,13 +31,17 @@ Then(/^Error Login message "([^"]*)" displays$/) do |message|
   # element === message
 end
 # find image
-When(/^I should see images$/) do
-  element = @driver.find_element(:css => 'https://s-passets-cache-ak0.pinimg.com/webapp/style/app/common/images/inspired-desktop/bg_pasta_half-56323898.jpg')
-  expect(element).to have_css("img[src*='C:/Users/Bigbubble/Downloads/bg_pasta_half-56323898.jpg']")
-end
+# When(/^I should see images$/) do
+#   element = @driver.find_element(:css => 'https://s-passets-cache-ak0.pinimg.com/webapp/style/app/common/images/inspired-desktop/bg_pasta_half-56323898.jpg')
+#   expect(element).to have_css("img[src*='C:/Users/Bigbubble/Downloads/bg_pasta_half-56323898.jpg']")
+# end
+#
+# # add to compare image
+# Then(/^I compare image$/) do
+#   element = @driver.find_element(:css => '')
+#   expect(element).to have_css("img[src*='environ-peeling-kuur.jpg']")
+# end
 
-# add to compare image
-Then(/^I compare image$/) do
-  element = @driver.find_element(:css => '')
-  expect(element).to have_css("img[src*='environ-peeling-kuur.jpg']")
-end
+
+# end
+

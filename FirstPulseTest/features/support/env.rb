@@ -5,6 +5,8 @@ require 'capybara/cucumber'
 require 'capybara/dsl'
 require 'capybara/rspec'
 require 'rack'
+require 'rspec'
+require 'rspec/expectations'
 
 
 

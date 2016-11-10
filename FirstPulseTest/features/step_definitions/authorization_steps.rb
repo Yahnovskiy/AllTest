@@ -33,7 +33,9 @@ end
 
 
 Then(/^Error Login message "([^"]*)" displays$/) do |message|
-  # expect(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span").to eq(message)
+
+
+  expect(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span").should eql(message)
   # page.find(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span", :text => 'message').text
   # page.should have_xpath(:xpath,"/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span", :text => message)
   # find(:xpath,=> '/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span')

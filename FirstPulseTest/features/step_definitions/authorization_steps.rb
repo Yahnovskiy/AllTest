@@ -23,7 +23,7 @@ And(/^I input in password "([^"]*)"$/) do |password|
 end
 
 And(/^I try to sign in$/) do
-  find(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[3]/button/div[1]").click
+  find(:xpath, "//button[contains(@class,'SignupButton')]").click
   # click_link_or_button(:xpath => '/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[3]/button/div[1]')
   # click_on 'Продолжить'
   # element = @driver.find_element(:xpath => '/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[3]/button/div[1]')
@@ -35,8 +35,8 @@ end
 Then(/^Error Login message "([^"]*)" displays$/) do |message|
 
 
-  expect(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span").should eql(message)
-  # page.find(:xpath, "/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span", :text => 'message').text
+ find(:xpath, "//div[@class='Tooltip_message']/span").text.should eq(message)
+
   # page.should have_xpath(:xpath,"/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span", :text => message)
   # find(:xpath,=> '/html/body/div[1]/div/div[1]/div/div/div/div[2]/div/div[2]/div/div[2]/div[3]/div/form/div[1]/fieldset/div[1]/div[1]/span')
 
